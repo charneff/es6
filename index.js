@@ -6,15 +6,25 @@
 // 	3) Variable: let
 // 		- Does not allow multiple declarations
 		
-// Arrow Functions - Function Expressions
-// 	1) With const declarations 
-// 		***sayColor***
+// Arrow Functions
+	// Traditional Declaration
+
+	// function sayColor(color){
+	// 	return color
+	// }
+	
+	//Expressions
 	const sayColor = (color) => {
 		return color;
 		}
+	
 	// const sayColor = color => color;
+
+
 	const isNumEven = num => num % 2 === 0 ? "yes" : "No"
+	
 	// ***setTimeout***()
+
 	setTimeout(function(){
 		console.log("Hello")
 		}, 500)
@@ -22,7 +32,7 @@
 	setTimeout(() => console.log("Hello"), 500)
 		
 // Destructuring - 
-// 	1)  Destructuring Assignement
+// 	1)  Destructuring Assignment
 	let nums = [1,3,6,8,4,11] // x, y, z, rotation X, rotation y, rotation z 
 	let [x,y,z] = nums
 		// x = 1,  y = 3, z = 6
@@ -66,10 +76,14 @@
 			</div>`
 	}
 		
-// 3) Destructuring with the Spread Operator 
+// 3) Destructuring with the Spread Operator
+	let rest = [1, 2, 3, 4, 5, 6]
 	function removeTwo([x, y, ...rest]){
+		console.log(x)
+		console.log(y)
 		return rest
 	}
+	//RETURNS [3, 4, 5, 6]
 		
 // 4) Spread Operator to Append to an Array
 	function addPerson(people, personToAdd){
@@ -107,7 +121,7 @@
 		})
 	})
 			
-	// 2) Promises //Promise.js --> when maakinig a new promise, you hit aa constructor function that takes in 2 parameters resolve aand reject (call whatever you want)
+	// 2) Promises //Promise.js --> when making a new promise, you hit aa constructor function that takes in 2 parameters resolve aand reject (call whatever you want)
 	
 	const apiPromiseAdd = (
 	x, y) => {
